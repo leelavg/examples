@@ -1,15 +1,4 @@
 baseURL: /
 languageCode: en-us
 title: Sample Hugo Site
-enableInlineShortcodes: true
 
-menu:
-  main:
-    - name: About
-      url: /about
-      weight: 1
-
-taxonomies:
-    category : "categories"
-    tag : "tags"
-    series : "series"
