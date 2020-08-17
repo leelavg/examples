@@ -1,0 +1,4 @@
+[build]
+    environment = {HUGO_VERSION = "0.74.0"}
+    command = "hugo --gc --minify --cleanDestinationDir"
+
