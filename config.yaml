@@ -2,3 +2,5 @@ baseURL: /
 languageCode: en-us
 title: Sample Hugo Site
 
+build:
+  writeStats: true

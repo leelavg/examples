@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link href="{{ "css/tailwind.css" | relURL }}" rel="stylesheet" />
+  {{$css := resources.Get "css/tailwind.css" | resources.PostCSS}}
+  {{if (eq (getenv "NODE_ENV") "production")}}
+  {{$css = $css | minify | fingerprint | resources.PostProcess}}
+  {{end}}
+  <link rel="stylesheet" type="text/css" href="{{$css.Permalink}}">
   <title>Welcome to Tailwind!</title>
 </head>
 <body class="antialiased">

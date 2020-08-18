@@ -1,4 +1,4 @@
 [build]
-    environment = {HUGO_VERSION = "0.74.0"}
-    command = "npm run build; hugo --gc --minify --cleanDestinationDir"
+    environment = {HUGO_VERSION = "0.74.0", NODE_ENV = "production"}
+    command = "hugo --gc --minify --cleanDestinationDir"
 
